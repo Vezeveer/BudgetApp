@@ -5,10 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -52,12 +49,15 @@ public class ExpenseFragment extends Fragment {
 
         mTitleField = v.findViewById(R.id.edit_text_title);
         mTitleField.setText(MMExpense.getmTitle());
-        Button mDateButton = v.findViewById(R.id.edit_text_date);
+        Button mDateButton = v.findViewById(R.id.btnDate);
+        Button mAmountButton = v.findViewById(R.id.btnAmount);
 
         mDateButton.setText(String.format(Locale.ENGLISH,
                 "%1$tY %1$tb %1$td",
                 MMExpense.getmDate()));
         mDateButton.setEnabled(false);
+        mAmountButton.setText(MMExpense.getmAmount() + " PHP");
+        mAmountButton.setEnabled(false);
 
         return v;
     }

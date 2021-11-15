@@ -22,11 +22,15 @@
         android:text="@string/details_name"/>
 
     <Button
-        android:id="@+id/edit_text_date"
+        android:id="@+id/btnDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
+    <Button
+        android:id="@+id/btnAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount" />
 
 
 </LinearLayout>

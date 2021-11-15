@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Locale;
 
 public class ExpenseListFragment extends Fragment {
 
@@ -89,7 +90,11 @@ public class ExpenseListFragment extends Fragment {
         public void bind(Expense expense){
             MMExpense = expense;
             mTitleTextView.setText(MMExpense.getmTitle());
-            mDateTextView.setText(MMExpense.getmDate().toString());
+            mDateTextView.setText(
+                    MMExpense.getmAmount() + " PHP - " +
+                    String.format(Locale.ENGLISH,
+                    "%1$tY %1$tb %1$td",
+                    MMExpense.getmDate()));
         }
 
         @Override
